@@ -72,7 +72,7 @@ const CHECKS = {
   },
 };
 
-async function sql(token, ref, query) {
+export async function sql(token, ref, query) {
   const r = await fetch(`${API}/projects/${ref}/database/query`, {
     method: "POST",
     headers: {
@@ -111,7 +111,7 @@ async function getAuthConfig(token, ref) {
   return r.json();
 }
 
-async function audit(token, ref) {
+export async function audit(token, ref) {
   const findings = [];
   const meta = await getProjectMeta(token, ref);
 
@@ -387,4 +387,3 @@ if (import.meta.url === `file://${process.argv[1].replace(/\\/g, "/")}` || impor
   });
 }
 
-export { audit };
