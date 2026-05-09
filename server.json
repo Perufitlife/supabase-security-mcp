@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.Perufitlife/supabase-security-mcp",
+  "description": "Audit, preview, and apply Supabase security fixes from inside any MCP-compatible AI agent. The only Supabase scanner that closes the loop with auto-remediation (preview + rollback + re-audit).",
+  "repository": {
+    "url": "https://github.com/Perufitlife/supabase-security-mcp",
+    "source": "github"
+  },
+  "version": "0.2.0",
+  "websiteUrl": "https://github.com/Perufitlife/supabase-security-mcp",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@perufitlife/supabase-security-mcp",
+      "version": "0.2.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "SUPABASE_ACCESS_TOKEN",
+          "description": "Supabase Personal Access Token. Get one at https://supabase.com/dashboard/account/tokens",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
